@@ -446,13 +446,13 @@ foreach ($cmd in $requiredCommands) {
 if (-not (Test-Path ".git")) {
     Write-Host "Initializing Git repository..."
     git init
-    git remote add origin git@github.com:thenetworkchuck/chuckblog.git
+    git remote add origin git@github.com:thenetworkchuck/chuckblogtest.git
 } else {
     Write-Host "Git repository already initialized."
     $remotes = git remote
     if (-not ($remotes -contains 'origin')) {
         Write-Host "Adding remote origin..."
-        git remote add origin git@github.com:thenetworkchuck/chuckblog.git
+        git remote add origin git@github.com:thenetworkchuck/chuckblogtest.git
     }
 }
 
